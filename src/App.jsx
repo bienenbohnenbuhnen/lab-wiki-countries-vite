@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import CountryPage from "./pages/CountryDetailsPage";
+import CountryDetails from "./pages/CountryDetailsPage";
 
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -23,7 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage countries={countries} />} />
-        <Route path="/:countryId" element={<CountryPage />} />
+        <Route path="/country/:countryId" element={<CountryDetails />} />
       </Routes>
     </div>
   );
